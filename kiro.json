@@ -1,0 +1,28 @@
+{
+  "name": "lemonsqueezy",
+  "displayName": "Lemon Squeezy",
+  "description": "Manage your Lemon Squeezy store, products, and orders directly from Kiro.",
+  "version": "1.0.0",
+  "publisher": "abakermi",
+  "license": "MIT",
+  "icon": "https://github.com/abakermi/lemonsqueezy-kiro-power/raw/main/assets/icon.png",
+  "categories": ["E-commerce", "SaaS", "Payments"],
+  "mcpServers": {
+    "default": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "env": {
+        "LEMONSQUEEZY_API_KEY": "${env:LEMONSQUEEZY_API_KEY}"
+      }
+    }
+  },
+  "steering": {
+    "prompts": [
+      {
+        "name": "Check Sales",
+        "description": "Check recent sales and revenue",
+        "content": "Use the list_products and list_stores tools to summarize the current store status."
+      }
+    ]
+  }
+}
